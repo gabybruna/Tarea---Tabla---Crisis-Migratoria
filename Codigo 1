@@ -1,0 +1,228 @@
+
+Table crisis;
+PFont fontpais;
+
+
+void setup() {
+
+  
+  size(1200, 1000);
+  background (100);
+
+  
+  crisis=loadTable("Crisis.csv", "header");
+
+  fontpais=loadFont("AvenirNextCondensed-Heavy-30.vlw");
+  smooth();
+
+  
+}
+
+void draw() {
+  
+  
+  
+  background (178, 239, 255, 20);
+  crisis.trim();
+  textFont(fontpais);
+  //Alemania - Fila 0
+  
+fill (170);
+  rect(1080, 490, crisis.getInt(0, 1)/35000, crisis.getInt(0, 1)/2000);
+  fill (30, 50, 120);
+  
+  
+  fill (30, 50, 120);
+  rect(1030, 490, crisis.getInt(0, 1)/35000, crisis.getInt(0, 1)/2000);
+  fill (30, 50, 120);
+  
+  
+  noStroke(); //PAIS 1 - ALEMANIA
+  fill (170);
+  ellipse(170, 110, crisis.getInt(0, 1)/3000, crisis.getInt(0, 1)/3000);
+  fill (30, 50, 120);
+  ellipse(170, 110, crisis.getInt(0, 2)/3000, crisis.getInt(0, 2)/3000);
+  fill (100);
+  text(crisis.getString(0, 0), 120, 180 + (crisis.getInt(0, 1)/5000)/2);
+
+  noStroke(); //PAIS 2 - FRANCIA
+   fill (170);
+  ellipse(370, 110, crisis.getInt(1, 1)/3000, crisis.getInt(1, 1)/3000);
+  fill (30, 50, 120);
+  ellipse(370, 110, crisis.getInt(1, 2)/3000, crisis.getInt(1, 2)/3000);
+  fill (100);
+  text(crisis.getString(1, 0), 335, 210 + (crisis.getInt(1, 1)/5000)/2);
+
+  noStroke(); //PAIS 3 - SUECIA
+  fill (170);
+  ellipse(540, 110, crisis.getInt(2, 1)/3000, crisis.getInt(2, 1)/3000);
+  fill (30, 50, 120);
+  ellipse(540, 110, crisis.getInt(2, 2)/3000, crisis.getInt(2, 2)/3000);
+  fill (100);
+  text(crisis.getString(2, 0), 505, 212 + (crisis.getInt(2, 1)/5000)/2);
+
+  noStroke(); //PAIS 4 - Italia
+  fill (170);
+  ellipse(680, 110, crisis.getInt(3, 1)/3000, crisis.getInt(3, 1)/3000);
+  fill (30, 50, 120);
+  ellipse(680, 110, crisis.getInt(3, 2)/3000, crisis.getInt(3, 2)/3000);
+  fill (100);
+  text(crisis.getString(3, 0), 655, 218 + (crisis.getInt(3, 1)/5000)/2);
+
+  noStroke(); //PAIS 5 - Hungria
+  fill (170);
+  ellipse(810, 110, crisis.getInt(4, 1)/3000, crisis.getInt(4, 1)/3000);
+  fill (30, 50, 120);
+  ellipse(810, 110, crisis.getInt(4, 2)/3000, crisis.getInt(4, 2)/3000);
+  fill (100);
+  text(crisis.getString(4, 0), 775, 222 + (crisis.getInt(4, 1)/5000)/2);
+
+  // SEGUNDA LINEA DE PAISES
+
+  noStroke(); //PAIS 6 / - UK
+  fill (170);
+  ellipse(170, 330, crisis.getInt(5, 1)/3000, crisis.getInt(5, 1)/3000);
+  fill (30, 50, 120);
+  ellipse(170, 330, crisis.getInt(5, 2)/3000, crisis.getInt(5, 2)/3000);
+  fill (100);
+  text(crisis.getString(5, 0), 153, 395 + (crisis.getInt(5, 1)/5000)/2);
+
+  noStroke(); //PAIS 7 / - AUSTRIA
+  fill (170);
+  ellipse(370, 330, crisis.getInt(6, 1)/3000, crisis.getInt(6, 1)/3000);
+  fill (30, 50, 120);
+  ellipse(370, 330, crisis.getInt(6, 2)/3000, crisis.getInt(6, 2)/3000);
+  fill (100);
+  text(crisis.getString(6, 0), 335, 400 + (crisis.getInt(6, 1)/5000)/2);
+
+  noStroke(); //PAIS 8 / - SUIZA
+  fill (170);
+  ellipse(540, 330, crisis.getInt(7, 1)/3000, crisis.getInt(7, 1)/3000);
+  fill (30, 50, 120);
+  ellipse(540, 330, crisis.getInt(7, 2)/3000, crisis.getInt(7, 2)/3000);
+  fill (100);
+  text(crisis.getString(7, 0), 515, 400 + (crisis.getInt(7, 1)/5000)/2);
+
+  noStroke(); //PAIS 9 / - BELGICA
+  fill (170);
+  ellipse(680, 330, crisis.getInt(8, 1)/3000, crisis.getInt(8, 1)/3000);
+  fill (30, 50, 120);
+  ellipse(680, 330, crisis.getInt(8, 2)/3000, crisis.getInt(8, 2)/3000);
+  fill (100);
+  text(crisis.getString(8, 0), 645, 400 + (crisis.getInt(8, 1)/5000)/2);
+
+  noStroke(); //PAIS 10 / - ROMANIA
+  fill (170);
+  ellipse(810, 330, crisis.getInt(9, 1)/3000, crisis.getInt(9, 1)/3000);
+  fill (30, 50, 120);
+  ellipse(810, 330, crisis.getInt(9, 2)/3000, crisis.getInt(9, 2)/3000);
+  fill (100);
+  text(crisis.getString(9, 0), 770, 400 + (crisis.getInt(9, 1)/5000)/2);
+
+  // TERCERA LINEA DE PAISES
+  // valores de x para los ellipses for fila
+  //170, 370, 540, 680, 810
+
+
+  noStroke(); //PAIS 11 / - PAISES BAJOS
+  fill (170);
+  ellipse(170, 510, crisis.getInt(10, 1)/800, crisis.getInt(10, 1)/800);
+  fill (30, 50, 120);
+  ellipse(170, 510, crisis.getInt(10, 2)/800, crisis.getInt(10, 2)/800);
+  fill (100);
+  text(crisis.getString(10, 0), 115, 580 + (crisis.getInt(10, 1)/5000)/2);
+
+  noStroke(); //PAIS 12 / - NORUEGA
+  fill (170);
+  ellipse(370, 510, crisis.getInt(11, 1)/800, crisis.getInt(11, 1)/800);
+  fill (30, 50, 120);
+  ellipse(370, 510, crisis.getInt(11, 2)/800, crisis.getInt(11, 2)/800);
+  fill (100);
+  text(crisis.getString(11, 0), 325, 585 + (crisis.getInt(11, 1)/5000)/2);
+
+  noStroke(); //PAIS 13 / - GRECIA
+  fill (170);
+  ellipse(540, 510, crisis.getInt(12, 1)/800, crisis.getInt(12, 1)/800);
+  fill (30, 50, 120);
+  ellipse(540, 510, crisis.getInt(12, 2)/800, crisis.getInt(12, 2)/800);
+  fill (100);
+  text(crisis.getString(12, 0), 510, 585 + (crisis.getInt(12, 1)/5000)/2);
+
+  noStroke(); //PAIS 14 / - POLONIA
+  fill (170);
+  ellipse(680, 510, crisis.getInt(13, 1)/800, crisis.getInt(13, 1)/800);
+  fill (30, 50, 120);
+  ellipse(680, 510, crisis.getInt(13, 2)/800, crisis.getInt(13, 2)/800);
+  fill (100);
+  text(crisis.getString(13, 0), 640, 585 + (crisis.getInt(13, 1)/5000)/2);
+
+  noStroke(); //PAIS 15 / - DINAMARCA
+  fill (170);
+  ellipse(810, 510, crisis.getInt(14, 1)/800, crisis.getInt(14, 1)/800);
+  fill (30, 50, 120);
+  ellipse(810, 510, crisis.getInt(14, 2)/800, crisis.getInt(14, 2)/800);
+  fill (100);
+  text(crisis.getString(14, 0), 760, 585 + (crisis.getInt(14, 1)/5000)/2);
+
+  // CUARTA LINEA DE PAISES
+  // valores de x para los ellipses for fila
+  //170, 370, 540, 680, 810
+  // valores de y para los nombres ---- 115, 325, 510, 640, 760
+
+  noStroke(); //PAIS 16 / - BULGARIA
+  fill (170);
+  ellipse(170, 670, crisis.getInt(15, 1)/800, crisis.getInt(15, 1)/800);
+  fill (30, 50, 120);
+  ellipse(170, 670, crisis.getInt(15, 2)/800, crisis.getInt(15, 2)/800);
+  fill (100);
+  text(crisis.getString(15, 0), 130, 750 + (crisis.getInt(15, 1)/5000)/2);
+
+  noStroke(); //PAIS 17 / - ESPAÑA
+  fill (170);
+  ellipse(370, 670, crisis.getInt(16, 1)/800, crisis.getInt(16, 1)/800);
+  fill (30, 50, 120);
+  ellipse(370, 670, crisis.getInt(16, 2)/800, crisis.getInt(16, 2)/800);
+  fill (100);
+  text(crisis.getString(16, 0), 330, 750 + (crisis.getInt(16, 1)/5000)/2);
+
+  noStroke(); //PAIS 18 / - FINLANDIA
+  fill (170);
+  ellipse(540, 670, crisis.getInt(17, 1)/800, crisis.getInt(17, 1)/800);
+  fill (30, 50, 120);
+  ellipse(540, 670, crisis.getInt(17, 2)/800, crisis.getInt(17, 2)/800);
+  fill (100);
+  text(crisis.getString(17, 0), 500, 750 + (crisis.getInt(17, 1)/5000)/2);
+
+  noStroke(); //PAIS 19 / - MALTA
+  fill (170);
+  ellipse(680, 670, crisis.getInt(18, 1)/800, crisis.getInt(18, 1)/800);
+  fill (30, 50, 120);
+  ellipse(680, 670, crisis.getInt(18, 2)/800, crisis.getInt(18, 2)/800);
+  fill (100);
+  text(crisis.getString(18, 0), 660, 750 + (crisis.getInt(18, 1)/5000)/2);
+
+  noStroke(); //PAIS 20 / - OTROS
+  fill (170);
+  ellipse(810, 670, crisis.getInt(19, 1)/800, crisis.getInt(19, 1)/800);
+  fill (30, 50, 120);
+  ellipse(810, 670, crisis.getInt(19, 2)/800, crisis.getInt(19, 2)/800);
+  fill (100);
+  text(crisis.getString(19, 0), 790, 750 + (crisis.getInt(19, 1)/5000)/2);
+
+
+
+
+  //PAIS 19 / - MALTA
+  //PAIS 20 / - OTROS
+
+
+  //noStroke(); //PAIS 19 - MALTA
+  //ellipse(500, 500, crisis.getInt(18, 1)/100, crisis.getInt(18, 1)/100);
+  //fill (30, 50, 120);
+  //ellipse(500, 500, crisis.getInt(18, 2)/100, crisis.getInt(18, 2)/100);
+  // fill (100);
+
+  //gggg Fila 1
+}
+
+//println(crisis.getInt(1,2));
